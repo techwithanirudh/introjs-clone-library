@@ -19,9 +19,10 @@
   left: var(--x, 50%);
   background-color: white;
   position: absolute;
-  border: 1px solid #777;
+/*   border: 1px solid #777; */
   border-radius: .25em;
-  max-width: 200px;
+  min-width: 250px;
+  max-width: 300px;
   z-index: 9001;
   opacity: 0;
   transform: scale(var(--scale)) translate(var(--translate));
@@ -52,25 +53,59 @@
 }
 
 .modal .footer {
-  border-top: 1px solid #777;
+  border-top: 1px solid #e0e0e0;
   padding: .5rem;
   display: flex;
   justify-content: space-between;
 }
 
 .modal .footer button {
-  cursor: pointer;
+    box-sizing: content-box;
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: .5rem 1rem;
+    border: 1px solid #bdbdbd;
+    text-decoration: none;
+    text-shadow: 1px 1px 0 #fff;
+    font-size: 14px;
+    color: #424242;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: 0;
+    background-color: #f4f4f4;
+    border-radius: .2em;
+    zoom: 1;
+    display: inline;
+}
+
+.modal .footer button:disabled {
+	color: #9e9e9e;
+    border-color: #bdbdbd;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: default;
+    background-color: #f4f4f4;
+    background-image: none;
+    text-decoration: none;
 }
 
 .modal .close-btn {
   position: absolute;
+  
+    box-sizing: content-box;
+    color: #616161;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    padding: 7px 10px;
   top: 0;
   right: 0;
   background: none;
   border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  color: #777;
   transition: 150ms ease-in-out;
 }
 

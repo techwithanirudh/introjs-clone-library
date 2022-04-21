@@ -188,6 +188,6 @@ const intro = new Intro([
 ])
 intro.start()
 
-setTimeout(() => {
-  intro.finish()
-}, 2000)
+// setTimeout(() => {
+//   intro.finish()
+// }, 2000)
