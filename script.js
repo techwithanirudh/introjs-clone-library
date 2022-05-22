@@ -69,6 +69,10 @@ class Modal {
     )
   }
 
+  done() {
+	  this.#nextBtn.textContent = 'Done'
+  }
+
   remove() {
     this.#modal.remove()
   }
@@ -113,6 +117,9 @@ class Intro {
           this.finish()
         } else {
           this.#showCurrentStep()
+			if (this.currentStepIndex >= this.steps.length - 1) {
+				this.#modal.done()
+			}
         }
       },
       () => this.finish()
